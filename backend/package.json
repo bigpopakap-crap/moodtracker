@@ -1,5 +1,5 @@
 {
-  "name": "express-backend",
+  "name": "@moodtracker/backend",
   "version": "0.1.0",
   "main": "./build/server.js",
   "scripts": {
@@ -28,7 +28,6 @@
     ]
   },
   "devDependencies": {
-    "@types/app-shared-types": "link:../types",
     "@types/body-parser": "^1.16.4",
     "@types/dotenv": "^4.0.0",
     "@types/express": "^4.0.36",
@@ -38,6 +37,7 @@
     "@types/lodash": "^4.14.116",
     "@types/mongodb-memory-server": "^1.8.0",
     "@types/mongoose": "^5.2.0",
+    "@types/moodtracker": "link:../types",
     "@types/node": "^8.0.13",
     "@types/passport": "^0.4.5",
     "@types/passport-local": "^1.0.33",

@@ -901,10 +901,6 @@
     "@svgr/core" "^2.4.1"
     loader-utils "^1.1.0"
 
-"@types/app-shared-types@link:../types":
-  version "0.0.0"
-  uid ""
-
 "@types/cheerio@*":
   version "0.22.10"
   resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.10.tgz#780d552467824be4a241b29510a7873a7432c4a6"
@@ -929,6 +925,10 @@
   integrity sha512-k3OOeevcBYLR5pdsOv5g3OP94h3mrJmLPHFEPWgbbVy2tGv0TZ/TlygiC848ogXhK8NL0I5up7YYtwpCp8xCJA==
   dependencies:
     "@types/jest-diff" "*"
+
+"@types/moodtracker@link:../types":
+  version "0.0.0"
+  uid ""
 
 "@types/node@*":
   version "11.9.5"
