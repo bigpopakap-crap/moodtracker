@@ -1,3 +1,5 @@
+// webpack uses require() imports I guess?
+/* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require('fs');
 const path = require('path');
 const NodemonPlugin = require('nodemon-webpack-plugin');
@@ -30,7 +32,5 @@ module.exports = {
   },
   target: 'node',
   externals: nodeModules,
-  plugins: [
-    new NodemonPlugin()
-  ]
+  plugins: [new NodemonPlugin()]
 };

@@ -6,7 +6,7 @@ import App, { AppState } from './App';
 
 let mock: MockAdapter;
 const mockItemsResponse = [{ name: 'item1', value: 1 }];
-const mockLoginResponse = { expiry: '2020-01-01T10:00:00.000Z', token: 'abcd123' }
+const mockLoginResponse = { expiry: '2020-01-01T10:00:00.000Z', token: 'abcd123' };
 const mockUserCredentials = { email: 'user-email', password: 'user-password' };
 
 beforeEach(() => {
