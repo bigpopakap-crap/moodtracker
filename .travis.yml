@@ -9,21 +9,13 @@ services:
 env:
   - AUTH_SHARED_SECRET=auth-shared-secret
 
-jobs:
-  include:
-    - stage: "Check dependencies, build, lint and test"
-    - name: "yarn check"
-      script: yarn check
-    - name: "yarn check --integrity"
-      script: yarn check --integrity
-    - name: "yarn check --verify-tree"
-      script: yarn check --verify-tree
-    - name: "yarn build"
-      script: yarn build
-    - name: "yarn lint"
-      script: yarn lint
-    - name: "yarn test"
-      script: yarn test
+script:
+  - yarn check
+  - yarn check --integrity
+  - yarn check --verify-tree
+  - yarn build
+  - yarn lint
+  - yarn test
 
 branches:
   only:
