@@ -3,8 +3,27 @@ node_js:
   - 10
   - 9
   - 8
+
 services:
   - mongodb
-script:
-- yarn test
-- yarn coveralls
+
+jobs:
+  include:
+    - stage: "Check dependencies, build, lint and test"
+    - name: "yarn check"
+      script: yarn check
+    - name: "yarn check --integrity"
+      script: yarn check --integrity
+    - name: "yarn check --verify-tree"
+      script: yarn check --verify-tree
+    - name: "yarn build"
+      script: yarn build
+    - name: "yarn lint"
+      script: yarn lint
+    - name: "yarn test"
+      script: yarn test
+    - name: "yarn coveralls"
+      script: yarn coveralls
+
+notifications:
+  email: false
