@@ -25,5 +25,9 @@ jobs:
     - name: "yarn test"
       script: yarn test
 
+branches:
+  only:
+    - greenkeeper/*
+
 notifications:
   email: false
