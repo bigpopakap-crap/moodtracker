@@ -1,5 +1,5 @@
 {
-  "name": "@types/app-shared-types",
+  "name": "@types/moodtracker",
   "version": "1.0.0",
   "description": "Shared types between backend and frontend",
   "main": "index.d.ts",

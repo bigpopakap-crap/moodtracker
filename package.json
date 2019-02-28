@@ -1,9 +1,9 @@
 {
-  "name": "create-mern-ts-app",
+  "name": "@moodtracker/project",
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": "8.x",
+    "node": "11",
     "yarn": "1.x"
   },
   "scripts": {
@@ -24,6 +24,7 @@
     "serve": "cd backend && node build/server.js"
   },
   "devDependencies": {
-    "concurrently": "^4.0.1"
+    "concurrently": "^4.0.1",
+    "node": "^11.10.0"
   }
 }
