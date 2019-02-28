@@ -1,4 +1,3 @@
-1. Set up Greenkeeper
 1. Set up linting for each project (as a separate package?)
 1. Remove unnecessary files
 1. Go through old Moodly and import configs
