@@ -1,4 +1,4 @@
-1. Set up Travis CI
+1. Set up Travis CI (in progress)
 1. Set up Greenkeeper
 1. Set up linting for each project (as a separate package?)
 1. Remove unnecessary files
