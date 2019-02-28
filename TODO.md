@@ -6,4 +6,6 @@
 1. Make React component generator with CSS modules
 1. Add i18n
 1. Change to a better db with an admin panel and stuff
+1. Add node as a dependency?
+1. Add yarn policy
 1. Add restyped: https://github.com/rawrmaan/restyped
