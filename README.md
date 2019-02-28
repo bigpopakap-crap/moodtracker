@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/bigpopakap/moodtracker.svg?branch=master)](https://travis-ci.com/bigpopakap/moodtracker)
+[![Build Status](https://travis-ci.com/bigpopakap/moodtracker.svg?branch=master)](https://travis-ci.com/bigpopakap/moodtracker) [![Greenkeeper badge](https://badges.greenkeeper.io/bigpopakap/moodtracker.svg)](https://greenkeeper.io/)
 
 # Fullstack Express-React app written in TypeScript
 
