@@ -38,7 +38,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postinstall": "yarn build",
     "test": "react-scripts test --coverage",
     "test:watch": "react-scripts test --coverage --watchAll",
     "check-deps": "yarn check --integrity && yarn check --verify-tree",
