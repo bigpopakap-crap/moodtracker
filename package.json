@@ -46,6 +46,17 @@
     "hard-reset:linting": "cd linting && yarn hard-reset",
     "hard-reset:types": "cd types && yarn hard-reset"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "yarn lint:fix",
+      "git add"
+    ]
+  },
   "devDependencies": {
     "@moodtracker/eslint-config-linting": "link:./linting",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
@@ -62,6 +73,8 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-typescript": "^0.14.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
     "node": "^11.10.0",
     "prettier": "^1.16.4",
     "react": "^16.8.3",

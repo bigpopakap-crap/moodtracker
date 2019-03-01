@@ -1,0 +1,4 @@
+[core]
+  # husky does some weird stuff with git paths, so doing this makes sure that it runs
+  # the correct pre-commit hook
+	hooksPath = .git/hooks
