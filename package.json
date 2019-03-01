@@ -7,10 +7,11 @@
     "yarn": "1.x"
   },
   "scripts": {
-    "install": "yarn install:backend && yarn install:frontend",
+    "postinstall": "yarn install:backend && yarn install:frontend",
     "install:backend": "cd backend && yarn install",
     "install:frontend": "cd frontend && yarn install",
-    "lint": "echo 'hi'",
+    "lint": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx ./",
+    "lint:fix": "yarn lint --fix",
     "build": "yarn build:backend && yarn build:frontend",
     "build:backend": "cd backend && yarn build",
     "build:frontend": "cd frontend && yarn build",
@@ -21,10 +22,35 @@
     "test": "yarn test:backend && yarn test:frontend",
     "test:backend": "cd backend && yarn test",
     "test:frontend": "cd frontend && yarn test",
-    "serve": "cd backend && node build/server.js"
+    "serve": "cd backend && node build/server.js",
+    "check-deps": "yarn check-deps:self && yarn check-deps:backend && yarn check-deps:frontend",
+    "check-deps:self": "yarn check --integrity && yarn check --verify-tree",
+    "check-deps:backend": "cd backend && yarn check-deps",
+    "check-deps:frontend": "cd frontend && yarn check-deps",
+    "ci": "yarn check-deps && yarn build && yarn lint && yarn test",
+    "hard-reset": "yarn hard-reset:self && yarn hard-reset:backend && yarn hard-reset:frontend",
+    "hard-reset:self": "yarn cache clean && rm -rf ./node_modules/",
+    "hard-reset:backend": "cd backend && yarn hard-reset",
+    "hard-reset:frontend": "cd frontend && yarn hard-reset"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "babel-eslint": "9.0.0",
     "concurrently": "^4.0.1",
-    "node": "^11.10.0"
+    "eslint": "5.6.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-react-app": "^3.0.7",
+    "eslint-plugin-css-modules": "^2.11.0",
+    "eslint-plugin-flowtype": "^3.4.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-typescript": "^0.14.0",
+    "node": "^11.10.0",
+    "prettier": "^1.16.4",
+    "react": "^16.8.3",
+    "typescript": "^3.3.3333"
   }
 }

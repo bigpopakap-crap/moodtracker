@@ -11,9 +11,6 @@
       "!src/registerServiceWorker.ts"
     ]
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -43,6 +40,8 @@
     "build": "react-scripts build",
     "postinstall": "yarn build",
     "test": "react-scripts test --coverage",
-    "test:watch": "react-scripts test --coverage --watchAll"
+    "test:watch": "react-scripts test --coverage --watchAll",
+    "check-deps": "yarn check --integrity && yarn check --verify-tree",
+    "hard-reset": "yarn cache clean && rm -rf ./node_modules/"
   }
 }

@@ -1,0 +1,10 @@
+# dependencies
+node_modules/
+
+# TODO remove this and move it to the subdirectories' .eslintignore files
+# testing
+coverage/
+
+# TODO remove this and move it to the subdirectories' .eslintignore files
+# production
+build/

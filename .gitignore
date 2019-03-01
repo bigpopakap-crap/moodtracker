@@ -1,6 +1,9 @@
 # OS stuff
 .DS_Store
 
+# editors
+.idea/
+
 # dependencies
 node_modules/
 
