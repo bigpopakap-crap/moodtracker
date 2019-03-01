@@ -40,6 +40,7 @@
     "build": "react-scripts build",
     "postinstall": "yarn build",
     "test": "react-scripts test --coverage",
-    "test:watch": "react-scripts test --coverage --watchAll"
+    "test:watch": "react-scripts test --coverage --watchAll",
+    "check-deps": "yarn check && yarn check --integrity && yarn check --verify-tree"
   }
 }

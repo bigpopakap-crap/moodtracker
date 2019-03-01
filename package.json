@@ -7,7 +7,7 @@
     "yarn": "1.x"
   },
   "scripts": {
-    "install": "yarn install:backend && yarn install:frontend",
+    "postinstall": "yarn install:backend && yarn install:frontend",
     "install:backend": "cd backend && yarn install",
     "install:frontend": "cd frontend && yarn install",
     "lint": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx ./",
@@ -22,7 +22,12 @@
     "test": "yarn test:backend && yarn test:frontend",
     "test:backend": "cd backend && yarn test",
     "test:frontend": "cd frontend && yarn test",
-    "serve": "cd backend && node build/server.js"
+    "serve": "cd backend && node build/server.js",
+    "check-deps": "yarn check-deps:self && yarn check-deps:backend && yarn check-deps:frontend",
+    "check-deps:self": "yarn check && yarn check --integrity && yarn check --verify-tree",
+    "check-deps:backend": "cd backend && yarn check-deps",
+    "check-deps:frontend": "cd frontend && yarn check-deps",
+    "ci": "yarn check-deps && yarn build && yarn lint && yarn test"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^1.4.2",
