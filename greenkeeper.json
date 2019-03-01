@@ -2,9 +2,10 @@
   "groups": {
     "default": {
       "packages": [
+        "package.json",
         "backend/package.json",
         "frontend/package.json",
-        "package.json",
+        "linting/package.json",
         "types/package.json"
       ]
     }
