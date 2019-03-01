@@ -7,11 +7,23 @@
     "yarn": "1.x"
   },
   "scripts": {
-    "postinstall": "yarn install:backend && yarn install:frontend",
+    "postinstall": "yarn install:backend && yarn install:frontend && yarn install:linting && yarn install:types",
     "install:backend": "cd backend && yarn install",
     "install:frontend": "cd frontend && yarn install",
-    "lint": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx ./",
-    "lint:fix": "yarn lint --fix",
+    "install:linting": "cd linting && yarn install",
+    "install:types": "cd types && yarn install",
+    "lint": "yarn lint:self && yarn lint:backend && yarn lint:frontend && yarn lint:linting && yarn lint:types",
+    "lint:fix": "yarn lint:self:fix && yarn lint:backend:fix && yarn lint:frontend:fix && yarn lint:linting:fix && yarn lint:types:fix",
+    "lint:self": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx ./",
+    "lint:self:fix": "yarn lint:self --fix",
+    "lint:backend": "cd backend && yarn lint",
+    "lint:backend:fix": "cd backend && yarn lint:fix",
+    "lint:frontend": "cd frontend &&  yarn lint",
+    "lint:frontend:fix": "cd frontend &&  yarn lint:fix",
+    "lint:linting": "cd linting && yarn lint",
+    "lint:linting:fix": "cd linting && yarn lint:fix",
+    "lint:types": "cd types && yarn lint",
+    "lint:types:fix": "cd types && yarn lint:fix",
     "build": "yarn build:backend && yarn build:frontend",
     "build:backend": "cd backend && yarn build",
     "build:frontend": "cd frontend && yarn build",
@@ -27,13 +39,15 @@
     "check-deps:self": "yarn check --integrity && yarn check --verify-tree",
     "check-deps:backend": "cd backend && yarn check-deps",
     "check-deps:frontend": "cd frontend && yarn check-deps",
-    "ci": "yarn check-deps && yarn build && yarn lint && yarn test",
-    "hard-reset": "yarn hard-reset:self && yarn hard-reset:backend && yarn hard-reset:frontend",
+    "hard-reset": "yarn hard-reset:self && yarn hard-reset:backend && yarn hard-reset:frontend && yarn hard-reset:linting && yarn hard-reset:types",
     "hard-reset:self": "yarn cache clean && rm -rf ./node_modules/",
     "hard-reset:backend": "cd backend && yarn hard-reset",
-    "hard-reset:frontend": "cd frontend && yarn hard-reset"
+    "hard-reset:frontend": "cd frontend && yarn hard-reset",
+    "hard-reset:linting": "cd linting && yarn hard-reset",
+    "hard-reset:types": "cd types && yarn hard-reset"
   },
   "devDependencies": {
+    "@moodtracker/eslint-config-linting": "link:./linting",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "babel-eslint": "9.0.0",
     "concurrently": "^4.0.1",
@@ -52,5 +66,8 @@
     "prettier": "^1.16.4",
     "react": "^16.8.3",
     "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "@moodtracker/linting": "link:./linting"
   }
 }

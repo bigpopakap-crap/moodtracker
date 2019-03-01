@@ -2,7 +2,9 @@ import * as _ from 'lodash';
 import MongodbMemoryServer from 'mongodb-memory-server';
 import * as mongoose from 'mongoose';
 import * as request from 'supertest';
+
 import app from '../app';
+
 import User from './user.model';
 
 describe('/api/users tests', () => {

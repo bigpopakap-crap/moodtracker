@@ -3,5 +3,14 @@
   "version": "1.0.0",
   "description": "Shared types between backend and frontend",
   "main": "index.d.ts",
-  "typeScriptVersion": "3"
+  "typeScriptVersion": "3",
+  "scripts": {
+    "lint": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx ./",
+    "lint:fix": "yarn lint --fix",
+    "hard-reset": "yarn cache clean && rm -rf ./node_modules/"
+  },
+  "devDependencies": {
+    "@moodtracker/eslint-config-linting": "link:../linting",
+    "eslint": "^5.14.1"
+  }
 }
