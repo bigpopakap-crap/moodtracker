@@ -48,7 +48,7 @@
     "@types/passport-local": "^1.0.33",
     "@types/supertest": "^2.0.2",
     "chalk": "^2.4.1",
-    "eslint": "^5.14.1",
+    "eslint": "^5.15.0",
     "jest": "^24.1.0",
     "mongodb-memory-server": "^3.1.1",
     "nodemon-webpack-plugin": "^4.0.7",
