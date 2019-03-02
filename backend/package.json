@@ -4,7 +4,7 @@
   "main": "./build/server.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "test": "jest --coverage --colors",
+    "test": "jest --coverage --colors && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test:watch": "jest --coverage --colors --watchAll",
     "start": "webpack --watch",
     "lint": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx ./",
@@ -47,6 +47,7 @@
     "@types/passport-local": "^1.0.33",
     "@types/supertest": "^2.0.2",
     "chalk": "^2.4.1",
+    "coveralls": "^3.0.3",
     "eslint": "^5.14.1",
     "eslint-config-moodtracker": "link:../linting",
     "jest": "^24.1.0",

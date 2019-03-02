@@ -5,4 +5,3 @@
 1. Change to a better db with an admin panel and stuff
 1. Add restyped: https://github.com/rawrmaan/restyped
 1. Add KeystoneJS or something similar for Typescript
-1. Add coveralls for code coverage
