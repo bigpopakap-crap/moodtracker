@@ -1,5 +1,5 @@
 module.exports = {
   'extends': [
-    '@moodtracker/linting/react'
+    'moodtracker/react'
   ]
 };

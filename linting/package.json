@@ -1,5 +1,5 @@
 {
-  "name": "@moodtracker/linting",
+  "name": "eslint-config-moodtracker",
   "version": "0.1.0",
   "private": true,
   "scripts": {

@@ -52,13 +52,13 @@
     }
   },
   "lint-staged": {
-    "*": [
+    "*.{json,js,jsx,ts,d.ts,tsx,css,scss,module.css,module.scss}": [
       "yarn lint:fix",
       "git add"
     ]
   },
   "devDependencies": {
-    "@moodtracker/eslint-config-linting": "link:./linting",
+    "eslint-config-moodtracker": "link:./linting",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "babel-eslint": "9.0.0",
     "concurrently": "^4.0.1",
@@ -79,8 +79,5 @@
     "prettier": "^1.16.4",
     "react": "^16.8.3",
     "typescript": "^3.3.3333"
-  },
-  "dependencies": {
-    "@moodtracker/linting": "link:./linting"
   }
 }

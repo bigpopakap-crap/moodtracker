@@ -97,14 +97,6 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@moodtracker/eslint-config-linting@link:./linting":
-  version "0.0.0"
-  uid ""
-
-"@moodtracker/linting@link:./linting":
-  version "0.0.0"
-  uid ""
-
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
@@ -703,6 +695,10 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.4, escape-string-regexp@^
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
+
+"eslint-config-moodtracker@link:./linting":
+  version "0.0.0"
+  uid ""
 
 eslint-config-prettier@^4.1.0:
   version "4.1.0"
