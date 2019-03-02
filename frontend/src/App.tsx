@@ -1,7 +1,8 @@
-import axios from "axios";
-import * as React from 'react';
-import './App.css';
+import React, { ReactNode } from 'react';
+import axios from 'axios';
+
 import * as session from './session';
+import './App.css';
 import logo from './logo.svg';
 
 export interface AppState {
@@ -14,20 +15,23 @@ export interface AppState {
 }
 
 class App extends React.Component<{}, AppState> {
-  public state = {
-    email: "",
-    password: "",
-    isRequesting: false,
-    isLoggedIn: false,
-    data: [],
-    error: ""
-  };
+  public constructor(props: {}) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+      isRequesting: false,
+      isLoggedIn: false,
+      data: [],
+      error: ''
+    };
+  }
 
-  public componentDidMount() {
+  public componentDidMount(): void {
     this.setState({ isLoggedIn: session.isSessionValid() });
   }
 
-  public render() {
+  public render(): ReactNode {
     return (
       <div className="App">
         <header className="App-header">
@@ -40,11 +44,19 @@ class App extends React.Component<{}, AppState> {
             <div>
               Server test data:
               <ul>
-                {this.state.data.map((item: App.Item, index) => <li key={index}>name: {item.name} / value: {item.value}</li>)}
+                {this.state.data.map((item: App.Item, index) => (
+                  <li key={index}>
+                    name: {item.name} / value: {item.value}
+                  </li>
+                ))}
               </ul>
             </div>
-            <button disabled={this.state.isRequesting} onClick={this.getTestData}>Get test data</button>
-            <button disabled={this.state.isRequesting} onClick={this.logout}>Log out</button>
+            <button disabled={this.state.isRequesting} onClick={this.getTestData}>
+              Get test data
+            </button>
+            <button disabled={this.state.isRequesting} onClick={this.logout}>
+              Log out
+            </button>
           </div>
         ) : (
           <div className="App-login">
@@ -53,15 +65,21 @@ class App extends React.Component<{}, AppState> {
               disabled={this.state.isRequesting}
               placeholder="email"
               type="text"
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ email: e.target.value })}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                this.setState({ email: e.target.value })
+              }
             />
             <input
               disabled={this.state.isRequesting}
               placeholder="password"
               type="password"
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ password: e.target.value })}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                this.setState({ password: e.target.value })
+              }
             />
-            <button disabled={this.state.isRequesting} onClick={this.handleLogin}>Log in</button>
+            <button disabled={this.state.isRequesting} onClick={this.handleLogin}>
+              Log in
+            </button>
           </div>
         )}
       </div>
@@ -71,14 +89,17 @@ class App extends React.Component<{}, AppState> {
   private handleLogin = async (): Promise<void> => {
     const { email, password } = this.state;
     try {
-      this.setState({ error: "" });
+      this.setState({ error: '' });
       this.setState({ isRequesting: true });
-      const response = await axios.post<{ token: string; expiry: string }>("/api/users/login", { email, password });
+      const response = await axios.post<{ token: string; expiry: string }>('/api/users/login', {
+        email,
+        password
+      });
       const { token, expiry } = response.data;
       session.setSession(token, expiry);
       this.setState({ isLoggedIn: true });
     } catch (error) {
-      this.setState({ error: "Something went wrong" });
+      this.setState({ error: 'Something went wrong' });
     } finally {
       this.setState({ isRequesting: false });
     }
@@ -91,15 +112,17 @@ class App extends React.Component<{}, AppState> {
 
   private getTestData = async (): Promise<void> => {
     try {
-      this.setState({ error: "" });
-      const response = await axios.get<App.Item[]>("/api/items", { headers: session.getAuthHeaders() });
+      this.setState({ error: '' });
+      const response = await axios.get<App.Item[]>('/api/items', {
+        headers: session.getAuthHeaders()
+      });
       this.setState({ data: response.data });
     } catch (error) {
-      this.setState({ error: "Something went wrong" });
+      this.setState({ error: 'Something went wrong' });
     } finally {
       this.setState({ isRequesting: false });
     }
-  }
+  };
 }
 
 export default App;

@@ -1,5 +1,5 @@
 module.exports = {
   'extends': [
-    'moodtracker/base'
+    './base.js'
   ]
 };

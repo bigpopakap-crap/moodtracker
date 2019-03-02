@@ -1,8 +1,7 @@
 import { pbkdf2Sync, randomBytes } from 'crypto';
+
 import { sign } from 'jsonwebtoken';
 import { Document, model, Schema } from 'mongoose';
-import { SchemaDef } from '../../types';
-
 interface User {
   email: string;
   hash: string;
@@ -15,7 +14,7 @@ interface UserDoc extends User, Document {
   generateJwt(): { token: string; expiry: Date };
 }
 
-const userSchemaDef: SchemaDef<User> = {
+const userSchemaDef: {} = {
   email: {
     type: String,
     // Important! We want users to be unique

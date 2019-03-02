@@ -7,8 +7,7 @@
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}",
       "!src/**/*.d.ts",
-      "!src/index.tsx",
-      "!src/registerServiceWorker.ts"
+      "!src/index.tsx"
     ]
   },
   "browserslist": [
@@ -24,6 +23,7 @@
     "react-scripts": "2.1.5"
   },
   "devDependencies": {
+    "eslint-config-moodtracker": "link:../linting",
     "@types/enzyme": "^3.1.17",
     "@types/jest": "^24.0.9",
     "@types/moodtracker": "link:../types",
@@ -32,6 +32,7 @@
     "axios-mock-adapter": "^1.16.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
+    "eslint": "5.12.0",
     "jest-localstorage-mock": "^2.4.0",
     "typescript": "^3.3.3"
   },
@@ -40,6 +41,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --coverage",
     "test:watch": "react-scripts test --coverage --watchAll",
+    "lint": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx ./",
+    "lint:fix": "yarn lint --fix",
     "check-deps": "yarn check --integrity && yarn check --verify-tree",
     "hard-reset": "yarn cache clean && rm -rf ./node_modules/"
   }

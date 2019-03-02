@@ -1,10 +1,8 @@
 # dependencies
 node_modules/
 
-# TODO remove this and move it to the subdirectories' .eslintignore files
-# testing
-coverage/
-
-# TODO remove this and move it to the subdirectories' .eslintignore files
-# production
-build/
+# sub-projects that lint themselves
+/backend/
+/frontend/
+/linting/
+/types/

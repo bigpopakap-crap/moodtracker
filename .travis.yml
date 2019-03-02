@@ -9,7 +9,17 @@ services:
 env:
   - AUTH_SHARED_SECRET=auth-shared-secret
 
-script: yarn ci
+jobs:
+  include:
+    - stage: "Check dependencies, build, lint and test"
+    - name: "yarn check-deps"
+      script: yarn check-deps
+    - name: "yarn build"
+      script: yarn build
+    - name: "yarn lint"
+      script: yarn lint
+    - name: "yarn test"
+      script: yarn test
 
 notifications:
   email: false

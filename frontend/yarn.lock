@@ -3460,6 +3460,10 @@ escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
+"eslint-config-moodtracker@link:../linting":
+  version "0.0.0"
+  uid ""
+
 eslint-config-react-app@^3.0.7:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/eslint-config-react-app/-/eslint-config-react-app-3.0.7.tgz#d58c9216ff285e2b4de0eb8403c28b0600e45b3e"

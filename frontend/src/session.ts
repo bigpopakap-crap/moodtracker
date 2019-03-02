@@ -1,3 +1,7 @@
+interface AuthHeaders {
+  Authorization: string;
+}
+
 // Set the session in the local storage
 export const setSession = (token: string, expiry: string): void => {
   localStorage.setItem('token', token);
@@ -20,6 +24,6 @@ export const isSessionValid = (): boolean => {
 };
 
 // Creates the authorization header using the bearer token
-export const getAuthHeaders = () => ({
+export const getAuthHeaders = (): AuthHeaders => ({
   Authorization: `Bearer ${localStorage.getItem('token')}`
 });

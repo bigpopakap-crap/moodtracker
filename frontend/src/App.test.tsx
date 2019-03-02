@@ -2,6 +2,7 @@ import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 import { shallow } from 'enzyme';
 import * as React from 'react';
+
 import App, { AppState } from './App';
 
 let mock: MockAdapter;
@@ -27,8 +28,12 @@ it('conditionally renders based on session', () => {
 it('can handle login', done => {
   mock.onPost('/api/users/login', mockUserCredentials).reply(200, mockLoginResponse);
   const wrapper = shallow<AppState>(<App />);
-  wrapper.find('input[placeholder="email"]').simulate("change", { target: { value: mockUserCredentials.email } });
-  wrapper.find('input[placeholder="password"]').simulate("change", { target: { value: mockUserCredentials.password } })
+  wrapper
+    .find('input[placeholder="email"]')
+    .simulate('change', { target: { value: mockUserCredentials.email } });
+  wrapper
+    .find('input[placeholder="password"]')
+    .simulate('change', { target: { value: mockUserCredentials.password } });
   wrapper.find('button[children="Log in"]').simulate('click');
   setImmediate(() => {
     expect(wrapper.state().isLoggedIn).toBe(true);
@@ -42,7 +47,7 @@ it('can catch login errors', done => {
   wrapper.setState({ email: 'user-email', password: 'user-password' });
   wrapper.find('button[children="Log in"]').simulate('click');
   setImmediate(() => {
-    expect(wrapper.state().error).toBe("Something went wrong");
+    expect(wrapper.state().error).toBe('Something went wrong');
     done();
   });
 });
@@ -52,7 +57,7 @@ it('can handle logout', () => {
   wrapper.setState({ isLoggedIn: true });
   wrapper.find('button[children="Log out"]').simulate('click');
   expect(wrapper.state().isLoggedIn).toBe(false);
-})
+});
 
 it('can get data', done => {
   mock.onGet('/api/items').reply(200, mockItemsResponse);
@@ -71,7 +76,7 @@ it('can catch data errors', done => {
   wrapper.setState({ isLoggedIn: true });
   wrapper.find('button[children="Get test data"]').simulate('click');
   setImmediate(() => {
-    expect(wrapper.state().error).toBe("Something went wrong");
+    expect(wrapper.state().error).toBe('Something went wrong');
     done();
   });
 });

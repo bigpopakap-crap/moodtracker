@@ -7,6 +7,8 @@
     "test": "jest --coverage --colors",
     "test:watch": "jest --coverage --colors --watchAll",
     "start": "webpack --watch",
+    "lint": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx ./",
+    "lint:fix": "yarn lint --fix",
     "check-deps": "yarn check --integrity && yarn check --verify-tree",
     "hard-reset": "yarn cache clean && rm -rf ./node_modules/"
   },
@@ -30,6 +32,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-config-moodtracker": "link:../linting",
     "@types/body-parser": "^1.16.4",
     "@types/dotenv": "^6.1.0",
     "@types/express": "^4.0.36",
@@ -45,6 +48,7 @@
     "@types/passport-local": "^1.0.33",
     "@types/supertest": "^2.0.2",
     "chalk": "^2.4.1",
+    "eslint": "^5.14.1",
     "jest": "^24.1.0",
     "mongodb-memory-server": "^3.1.1",
     "nodemon-webpack-plugin": "^4.0.7",
