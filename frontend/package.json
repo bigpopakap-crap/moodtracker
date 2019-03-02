@@ -17,17 +17,23 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
     "axios": "^0.18.0",
+    "classnames": "^2.2.6",
+    "node-sass": "^4.11.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.5"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.7",
     "@types/enzyme": "^3.1.17",
     "@types/jest": "^24.0.9",
     "@types/moodtracker": "link:../types",
     "@types/react": "^16.8.2",
     "@types/react-dom": "^16.8.0",
+    "@types/react-router-dom": "^4.3.1",
     "axios-mock-adapter": "^1.16.0",
     "coveralls": "^3.0.3",
     "enzyme": "^3.8.0",

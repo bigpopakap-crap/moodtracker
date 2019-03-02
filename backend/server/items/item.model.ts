@@ -1,7 +1,7 @@
 import { Document, model, Schema } from 'mongoose';
 
 // Declare model interface
-interface ItemDoc extends App.Item, Document {}
+interface StoredMood extends App.Item, Document {}
 
 const itemSchemaDef: {} = {
   name: {

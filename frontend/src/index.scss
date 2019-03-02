@@ -1,0 +1,16 @@
+// General styles for the browser that are not specific to the application.
+//
+// Be selective about what goes here:
+//
+// Many styles to normalize the browser are already declared by material-ui's
+// <CssBaseline /> element. https://material-ui.com/style/css-baseline/
+
+code {
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Courier New",
+    monospace;
+}
