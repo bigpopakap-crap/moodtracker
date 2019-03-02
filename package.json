@@ -7,6 +7,11 @@
     "yarn": "1.x"
   },
   "scripts": {
+    "upgrade:all": "yarn upgrade && yarn upgrade:backend && yarn upgrade:frontend && yarn upgrade:linting && yarn upgrade:types",
+    "upgrade:backend": "cd backend && yarn upgrade",
+    "upgrade:frontend": "cd frontend && yarn upgrade",
+    "upgrade:linting": "cd linting && yarn upgrade",
+    "upgrade:types": "cd types && yarn upgrade",
     "postinstall": "yarn install:backend && yarn install:frontend && yarn install:linting && yarn install:types",
     "install:backend": "cd backend && yarn install",
     "install:frontend": "cd frontend && yarn install",
@@ -58,11 +63,11 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-moodtracker": "link:./linting",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
-    "babel-eslint": "9.0.0",
+    "babel-eslint": "9.x",
     "concurrently": "^4.0.1",
     "eslint": "5.12.0",
+    "eslint-config-moodtracker": "link:./linting",
     "eslint-config-prettier": "^4.1.0",
     "eslint-config-react-app": "^3.0.7",
     "eslint-plugin-css-modules": "^2.11.0",
