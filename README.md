@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.com/bigpopakap/moodtracker.svg?branch=master)](https://travis-ci.com/bigpopakap/moodtracker)
 [![Greenkeeper badge](https://badges.greenkeeper.io/bigpopakap/moodtracker.svg)](https://greenkeeper.io/)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![TypeScript](https://badges.frapsoft.com/typescript/awesome/typescript.png?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
 # Fullstack Express-React app written in TypeScript
 
