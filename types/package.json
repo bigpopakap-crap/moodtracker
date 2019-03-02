@@ -11,6 +11,6 @@
   },
   "devDependencies": {
     "eslint-config-moodtracker": "link:../linting",
-    "eslint": "^5.14.1"
+    "eslint": "^5.15.0"
   }
 }
