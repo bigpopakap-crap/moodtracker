@@ -1,4 +1,4 @@
-export enum URLS {
+export enum AppURL {
   HOME = '/',
   LOGIN = '/login',
   JOURNAL = '/journal'

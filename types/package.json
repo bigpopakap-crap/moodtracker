@@ -1,5 +1,5 @@
 {
-  "name": "@types/moodtracker",
+  "name": "@moodtracker/types",
   "version": "1.0.0",
   "description": "Shared types between backend and frontend",
   "typeScriptVersion": "3",

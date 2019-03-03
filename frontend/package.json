@@ -30,7 +30,7 @@
     "@types/classnames": "^2.2.7",
     "@types/enzyme": "^3.1.17",
     "@types/jest": "^24.0.9",
-    "@types/moodtracker": "link:../types",
+    "@moodtracker/types": "link:../types",
     "@types/react": "^16.8.2",
     "@types/react-dom": "^16.8.0",
     "@types/react-router-dom": "^4.3.1",

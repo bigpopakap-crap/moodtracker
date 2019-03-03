@@ -1,6 +1,7 @@
 import React, { Component, ReactNode } from 'react';
 import Button from '@material-ui/core/Button';
 import { NavLink, Route, Switch as RouteSwitch } from 'react-router-dom';
+import { AppURL } from '@moodtracker/types/urls/app';
 
 import styles from './Navbutton.module.scss';
 
@@ -15,7 +16,7 @@ interface Props {
    * The URL to match. If we are on this URL, the nav link will get special styling
    * to indicate that it is active.
    */
-  path: string;
+  path: AppURL;
 
   /**
    * The text label for the link.

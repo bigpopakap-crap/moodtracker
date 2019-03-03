@@ -2,6 +2,7 @@ import React, { Component, ReactNode } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import classnames from 'classnames';
+import { AppURL } from '@moodtracker/types/urls/app';
 
 import Navbutton from './Navbutton/Navbutton';
 import styles from './Navbar.module.scss';
@@ -30,9 +31,9 @@ export default class Navbar extends Component<Props> {
       <AppBar className={classnames(styles.Navbar, navbarPositionClassNames)}>
         <Toolbar>
           {/* Not all routes need to be here, but the URLs do need to match what's in the Router */}
-          <Navbutton exact path="/" label="Home" />
-          <Navbutton exact path="/login" label="Login" />
-          <Navbutton exact path="/journal" label="Journal" />
+          <Navbutton exact path={AppURL.HOME} label="Home" />
+          <Navbutton exact path={AppURL.LOGIN} label="Login" />
+          <Navbutton exact path={AppURL.JOURNAL} label="Journal" />
         </Toolbar>
       </AppBar>
     );
