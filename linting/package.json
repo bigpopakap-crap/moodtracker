@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "hard-reset": "yarn cache clean && rm -rf ./node_modules/",
     "lint": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx ./",
-    "lint:fix": "yarn lint --fix",
-    "hard-reset": "yarn cache clean && rm -rf ./node_modules/"
+    "lint:fix": "yarn lint --fix"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^1.4.2",
@@ -25,8 +28,5 @@
     "prettier": "^1.16.4",
     "react": "^16.8.3",
     "typescript": "^3.3.3333"
-  },
-  "devDependencies": {
-    "eslint": "^5.14.1"
   }
 }

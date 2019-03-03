@@ -4,34 +4,46 @@
   "main": "./build/server.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "test": "jest --coverage --colors && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "test:watch": "jest --coverage --colors --watchAll",
-    "start": "webpack --watch",
+    "check-deps": "yarn check --integrity && yarn check --verify-tree",
+    "hard-reset": "yarn cache clean && rm -rf ./node_modules/",
     "lint": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx ./",
     "lint:fix": "yarn lint --fix",
-    "check-deps": "yarn check --integrity && yarn check --verify-tree",
-    "hard-reset": "yarn cache clean && rm -rf ./node_modules/"
+    "start": "webpack --watch",
+    "test": "jest --coverage --colors && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test:watch": "jest --coverage --colors --watchAll"
   },
   "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "transform": {
-      "^.+\\.(ts|tsx)$": "./node_modules/ts-jest/preprocessor.js"
-    },
-    "testMatch": [
-      "/**/*.test.ts"
-    ],
     "collectCoverageFrom": [
       "**/*.ts",
       "!**/*.d.ts",
       "!server/server.ts",
       "!server/app.ts",
       "!scripts/*"
-    ]
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testMatch": [
+      "/**/*.test.ts"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "./node_modules/ts-jest/preprocessor.js"
+    }
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.2",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.10",
+    "mongoose": "^5.2.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
+    "@moodtracker/types": "link:../types",
     "@types/body-parser": "^1.16.4",
     "@types/dotenv": "^6.1.0",
     "@types/express": "^4.0.36",
@@ -41,7 +53,6 @@
     "@types/lodash": "^4.14.116",
     "@types/mongodb-memory-server": "^1.8.0",
     "@types/mongoose": "^5.2.0",
-    "@moodtracker/types": "link:../types",
     "@types/node": "^11.9.5",
     "@types/passport": "^1.0.0",
     "@types/passport-local": "^1.0.33",
@@ -61,16 +72,5 @@
     "typescript": "^3.1.6",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
-  },
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "dotenv": "^6.2.0",
-    "express": "^4.16.2",
-    "express-jwt": "^5.3.1",
-    "jsonwebtoken": "^8.3.0",
-    "lodash": "^4.17.10",
-    "mongoose": "^5.2.4",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
   }
 }

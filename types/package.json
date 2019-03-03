@@ -2,14 +2,14 @@
   "name": "@moodtracker/types",
   "version": "1.0.0",
   "description": "Shared types between backend and frontend",
-  "typeScriptVersion": "3",
   "scripts": {
+    "hard-reset": "yarn cache clean && rm -rf ./node_modules/",
     "lint": "yarn eslint --ext json,js,jsx,ts,d.ts,tsx ./",
-    "lint:fix": "yarn lint --fix",
-    "hard-reset": "yarn cache clean && rm -rf ./node_modules/"
+    "lint:fix": "yarn lint --fix"
   },
   "devDependencies": {
     "eslint": "^5.14.1",
     "eslint-config-moodtracker": "link:../linting"
-  }
+  },
+  "typeScriptVersion": "3"
 }
