@@ -33,9 +33,6 @@ export default class Navbar extends Component<Props> {
           <Navbutton exact path="/" label="Home" />
           <Navbutton exact path="/login" label="Login" />
           <Navbutton exact path="/journal" label="Journal" />
-          <Navbutton exact path="/issues" label="Issues" />
-          <Navbutton exact path="/moods" label="Moods" />
-          <Navbutton exact path="/dashboard" label="Graphs" />
         </Toolbar>
       </AppBar>
     );
