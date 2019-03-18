@@ -10,7 +10,7 @@
     "hard-reset": "yarn cache clean && rm -rf ./node_modules/"
   },
   "devDependencies": {
-    "eslint": "^5.14.1",
+    "eslint": "^5.15.3",
     "eslint-config-moodtracker": "link:../linting"
   }
 }
