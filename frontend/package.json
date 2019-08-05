@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.17",
-    "@types/jest": "^24.0.9",
+    "@types/jest": "^24.0.17",
     "@types/moodtracker": "link:../types",
     "@types/react": "^16.8.2",
     "@types/react-dom": "^16.8.0",
