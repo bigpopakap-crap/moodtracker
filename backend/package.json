@@ -38,7 +38,7 @@
     "@types/express-jwt": "^0.0.41",
     "@types/jest": "^24.0.9",
     "@types/jsonwebtoken": "^8.3.0",
-    "@types/lodash": "^4.14.116",
+    "@types/lodash": "^4.14.137",
     "@types/mongodb-memory-server": "^1.8.0",
     "@types/mongoose": "^5.2.0",
     "@types/moodtracker": "link:../types",
