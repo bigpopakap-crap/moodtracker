@@ -40,7 +40,7 @@
     "@types/jsonwebtoken": "^8.3.0",
     "@types/lodash": "^4.14.116",
     "@types/mongodb-memory-server": "^1.8.0",
-    "@types/mongoose": "^5.2.0",
+    "@types/mongoose": "^5.5.13",
     "@types/moodtracker": "link:../types",
     "@types/node": "^11.9.5",
     "@types/passport": "^1.0.0",
