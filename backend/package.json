@@ -43,7 +43,7 @@
     "@types/mongoose": "^5.2.0",
     "@types/moodtracker": "link:../types",
     "@types/node": "^11.9.5",
-    "@types/passport": "^1.0.0",
+    "@types/passport": "^1.0.1",
     "@types/passport-local": "^1.0.33",
     "@types/supertest": "^2.0.2",
     "chalk": "^2.4.1",
