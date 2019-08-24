@@ -32,7 +32,7 @@
     "coveralls": "^3.0.3",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
-    "eslint": "5.12.0",
+    "eslint": "6.2.2",
     "eslint-config-moodtracker": "link:../linting",
     "jest": "23.x",
     "jest-localstorage-mock": "^2.4.0",
