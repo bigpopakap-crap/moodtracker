@@ -248,10 +248,10 @@
     "@types/bson" "*"
     "@types/node" "*"
 
-"@types/mongoose@^5.2.0":
-  version "5.3.20"
-  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.3.20.tgz#3daf682cc326b685d1df3eca6d40181962a6aeca"
-  integrity sha512-KXD/wRaUkxA7NwU+0yp60WEFFmkhzJ4idGawycjUxFMTANIM7ZqlZsoXhHu3p33cg450D8PuwtAorFUwuMXLwA==
+"@types/mongoose@^5.5.18":
+  version "5.5.18"
+  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.5.18.tgz#1dcf0efaeb5a813f8311561d098f7259e0761775"
+  integrity sha512-YWTNSehI+TvuqzEzr7nhzYRbwraq43bZao4XZc/T2ViGmzX06Wy9XPHCHAZ2vsuiZ9Vh9tiGomRt7MjzTihn+w==
   dependencies:
     "@types/mongodb" "*"
     "@types/node" "*"
